@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    void fireProjectile(){
-        if(Input.GetKeyDown(KeyCode.Space)){
+    void fireProjectile(){//maybe i'll have to erase this && later
+        if(Input.GetKeyDown(KeyCode.Space)&& projectileClone == null){
             projectileClone = Instantiate(projectile, new Vector3(player.transform.position.x, player.transform.position.y + 0.6f, 0), player.transform.rotation) as GameObject;
         }
     }

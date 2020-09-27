@@ -40,8 +40,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement();
-        fireProjectile();
+        if(GameManager.lives>0){
+           movement();
+           fireProjectile(); 
+        }
+        else{
+            player.transform.position = new Vector3(500, 0, 0);
+        }
+        
     }
 
 }

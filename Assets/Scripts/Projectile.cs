@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
         if(collision.gameObject.tag=="Enemy"){//if hit the enemy
             Destroy(collision.gameObject);
             Destroy(projectile);//laser is destroyed by hitting the enemy 
+            
         }
         if(collision.gameObject.tag == "Finish"){
             Destroy(projectile);
@@ -18,7 +19,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.playGame = true;
     }
 
     // Update is called once per frame

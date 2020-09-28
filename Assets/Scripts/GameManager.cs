@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static int lives = 3;
+    public static int lives = 4;
     public static int beatedEnemies = 0;
     public static bool playGame = true;
     public Text livesText;

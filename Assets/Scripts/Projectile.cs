@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
             Destroy(projectile);//laser is destroyed by hitting the enemy 
             
         }
-        if(collision.gameObject.tag == "Finish"){
+        if(collision.gameObject.tag == "FinishLaser"){
             Destroy(projectile);
         }
     }
@@ -25,6 +25,6 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, -8*Time.deltaTime, 0));
+        transform.Translate(new Vector3(0, -15*Time.deltaTime, 0));
     }
 }
